@@ -1,5 +1,6 @@
 export default async function apiSearch(event) {
     try {
+
         if (event) {
             event.preventDefault();
         }
@@ -10,7 +11,7 @@ export default async function apiSearch(event) {
         const response = await fetch(server);
         const data = await response.json();
 
-        console.log(data);
+        return data;
 
     } catch (err) {
         alert("Something went wrong");
