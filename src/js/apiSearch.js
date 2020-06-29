@@ -1,5 +1,5 @@
-import { setToStorage } from "./storage";
-
+import { setToStorage, getFromStorage } from "./storage";
+import drawingResults from "./drawingResults";
 
 export default async function apiSearch(event, lastTextForSearch) {
     try {
@@ -14,11 +14,27 @@ export default async function apiSearch(event, lastTextForSearch) {
             textForSearch = lastTextForSearch;
         }
 
-        setToStorage("lastTextForSearch", textForSearch);
+        if (textForSearch === "") {
+            alert("Empty string! Showing last succes request");
+            textForSearch = getFromStorage("lastTextForSearch");
+        }
 
         const server = `https://api.themoviedb.org/3/search/multi?api_key=888e6f69f5b71f4265688d6b69d2a141&language=en&query=${textForSearch}`;
         const response = await fetch(server);
         const data = await response.json();
+
+
+        if (textForSearch && data.results.length != 0) {
+            setToStorage("lastTextForSearch", textForSearch);
+        } else {
+
+            alert("The results not found! Showing last succes request.");
+
+            const response = apiSearch(null, getFromStorage("lastTextForSearch"));
+            response.then((response) => {
+                drawingResults(response);
+            });
+        }
 
         return data;
 
