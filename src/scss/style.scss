@@ -1,0 +1,66 @@
+@import './slider';
+
+html, body {
+    position: relative;
+    height: 100%;
+  }
+  
+  body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color:#000;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header{
+    height: 5%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: 'Halant', serif;
+  }
+  
+  .main{
+    height: 90%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .name-of-movie{
+    height: 5%;
+  }
+  
+  .search-form{
+    display: grid;
+    grid-template-columns: 10fr 1fr;
+    width: 80%;
+    margin: 0px auto;
+  }
+  
+  .input{
+    height: 30px;
+    box-sizing: border-box;
+    border: 2px solid rgb(156, 156, 156);
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+  }
+  
+  .footer{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: 'Halant', serif;
+    height: 5%;
+  }
