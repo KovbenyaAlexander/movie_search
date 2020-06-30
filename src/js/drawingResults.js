@@ -1,5 +1,6 @@
 import { swiper } from "./swiper";
 import createDomElement from "./createDomElement";
+import modalWindowDrawing from "./modal";
 
 export default function drawingResults(data) {
 
@@ -40,4 +41,5 @@ export default function drawingResults(data) {
     }
 
     swiper.update();
+    modalWindowDrawing(data);
 }
