@@ -1,3 +1,5 @@
+import { showLoader, hideLoader } from "./loader";
+
 export default function modalWindowDrawing(data) {
 
     const urlPoster = "https://image.tmdb.org/t/p/w500";
@@ -17,6 +19,8 @@ export default function modalWindowDrawing(data) {
 
         (async () => {
             try {
+
+                showLoader();
 
                 let url;
                 if (data[movieId].media_type === "movie") {
@@ -92,6 +96,8 @@ export default function modalWindowDrawing(data) {
                         modal.classList.remove("open");
                     }
                 });
+
+                hideLoader();
 
             } catch (err) {
                 alert("Something went wrong. The page will reboot.");

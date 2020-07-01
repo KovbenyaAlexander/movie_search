@@ -1,8 +1,12 @@
 import { setToStorage, getFromStorage } from "./storage";
+import { showLoader, hideLoader } from "./loader";
 import drawingResults from "./drawingResults";
+
 
 export default async function apiSearch(event, lastTextForSearch) {
     try {
+
+        showLoader();
 
         if (event) {
             event.preventDefault();
@@ -36,6 +40,7 @@ export default async function apiSearch(event, lastTextForSearch) {
             });
         }
 
+        hideLoader();
         return data;
 
     } catch (err) {

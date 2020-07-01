@@ -52,5 +52,8 @@
         "@babel/preset-env"
       ]
     ]
+  },
+  "dependencies": {
+    "spin.js": "^4.1.0"
   }
 }
