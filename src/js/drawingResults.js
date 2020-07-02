@@ -40,6 +40,7 @@ export default function drawingResults(data) {
         }
     }
 
+    swiper.slideTo(0, 1500);
     swiper.update();
     modalWindowDrawing(data);
 }
