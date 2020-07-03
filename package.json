@@ -57,6 +57,7 @@
     ]
   },
   "dependencies": {
-    "spin.js": "^4.1.0"
+    "spin.js": "^4.1.0",
+    "swiper": "^6.0.0"
   }
 }
