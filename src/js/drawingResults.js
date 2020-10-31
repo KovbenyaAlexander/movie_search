@@ -25,9 +25,9 @@ export default function drawingResults(data) {
         }
 
         if (data.results[i].poster_path) {
-          item.innerHTML += `<img src="${urlPoster}${data.results[i].poster_path}" width="100%" height="80%">`;
+          item.innerHTML += `<img src="${urlPoster}${data.results[i].poster_path}" class="big_poster" width="95%" height="80%">`;
         } else {
-          item.innerHTML += "<img src=\"https://kritka.info/uploads/posts/no_poster.jpg\" width=\"100%\" height=\"80%\">";
+          item.innerHTML += "<img src=\"https://kritka.info/uploads/posts/no_poster.jpg\" class='big_poster' width=\"95%\" height=\"80%\">";
         }
       }
     } else {

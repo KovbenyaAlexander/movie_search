@@ -6,4 +6,11 @@
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-  }
+    cursor: pointer;
+    margin-top: 10px;
+    height: 90%;
+}
+
+.swiper-slide:hover {
+    cursor: pointer;
+}
